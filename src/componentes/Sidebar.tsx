@@ -20,79 +20,44 @@ const Sidebar: React.FC<SidebarProps> = ({ abierto, usuario, setPantalla, handle
       <div className="flex flex-col h-full p-6">
         <h2 className="text-3xl font-extrabold text-gray-900 mb-8">Menú</h2>
         <div className="flex flex-col gap-3">
-          {/* Opciones para usuarios normales */}
           {usuario.rol === "usuario" && (
             <>
-              <button
-                onClick={() => setPantalla("adopciones")}
-                className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300"
-              >
+              <button onClick={() => setPantalla("adopciones")} className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300">
                 <FaUsers /> Adopciones
               </button>
-              <button
-                onClick={() => setPantalla("animales")}
-                className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300"
-              >
+              <button onClick={() => setPantalla("animales")} className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300">
                 <FaPaw /> Animales
               </button>
-              <button
-                onClick={() => setPantalla("voluntarios")}
-                className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300"
-              >
+              <button onClick={() => setPantalla("voluntarios")} className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300">
                 <FaUsers /> Voluntarios
               </button>
-              <button
-                onClick={() => setPantalla("donaciones")}
-                className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300"
-              >
+              <button onClick={() => setPantalla("donaciones")} className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300">
                 <FaHandHoldingHeart /> Donaciones
               </button>
             </>
           )}
-
-          {/* Opciones para administradores */}
           {usuario.rol === "administrador" && (
             <>
-              <button
-                onClick={() => setPantalla("usuarios")}
-                className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300"
-              >
+              <button onClick={() => setPantalla("usuarios")} className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300">
                 <FaUsers /> Usuarios
               </button>
-              <button
-                onClick={() => setPantalla("animalesAdmin")}
-                className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300"
-              >
+              <button onClick={() => setPantalla("animalesAdmin")} className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300">
                 <FaPaw /> Animales
               </button>
-              <button
-                onClick={() => setPantalla("reportes")}
-                className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300"
-              >
+              <button onClick={() => setPantalla("reportes")} className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300">
                 <FaChartBar /> Reportes
               </button>
-              <button
-                onClick={() => setPantalla("voluntariosAdmin")}
-                className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300"
-              >
+              <button onClick={() => setPantalla("voluntariosAdmin")} className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300">
                 <FaUsers /> Voluntarios
               </button>
-              <button
-                onClick={() => setPantalla("donacionesAdmin")}
-                className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300"
-              >
+              <button onClick={() => setPantalla("donacionesAdmin")} className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-100 transition-all duration-300">
                 <FaHandHoldingHeart /> Donaciones
               </button>
             </>
           )}
         </div>
-
-        {/* Botón de salir */}
         <div className="mt-auto">
-          <button
-            onClick={handleSalir}
-            className="flex items-center gap-3 px-4 py-3 rounded-xl text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300"
-          >
+          <button onClick={handleSalir} className="flex items-center gap-3 px-4 py-3 rounded-xl text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300">
             <FaSignOutAlt /> Salir
           </button>
         </div>
