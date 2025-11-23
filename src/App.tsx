@@ -58,8 +58,8 @@ const App: React.FC = () => {
             handleSalir={handleSalir}
           />
 
-          {/* Contenido principal */}
-          <div className={`flex-1 flex flex-col transition-all duration-300`}>
+          {/* Contenido principal con ajuste de margen según sidebar */}
+          <div className={`flex-1 flex flex-col transition-all duration-300 ${sidebarAbierto ? "ml-60" : "ml-0"}`}>
             <Navbar
               usuario={usuarioActual}
               sidebarAbierto={sidebarAbierto}
@@ -67,7 +67,6 @@ const App: React.FC = () => {
               setPantalla={setPantalla}
             />
 
-            {/* Main */}
             <main className="pt-16 w-full">
               {usuarioActual.rol === "administrador" ? (
                 pantalla === "usuarios" ? (
@@ -84,7 +83,6 @@ const App: React.FC = () => {
                   <InicioAdmin usuario={usuarioActual} sidebarAbierto={sidebarAbierto} />
                 )
               ) : (
-                // Usuario normal
                 pantalla === "inicio" ? (
                   <InicioUsuario usuario={usuarioActual} sidebarAbierto={sidebarAbierto} />
                 ) : pantalla === "adopciones" ? (
