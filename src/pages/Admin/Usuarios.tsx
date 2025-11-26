@@ -102,7 +102,7 @@ const Usuarios: React.FC<UsuariosProps> = ({ usuarioLogueado }) => {
         const res = await axios.post(`${API_URL}/usuarios`, usuarioEditado);
         usuarioGuardado = res.data;
         setUsuarios(prev => [...prev, usuarioGuardado]);
-        setPaginaActual(1); // Resetear la página al agregar nuevo
+        setPaginaActual(1); 
       }
 
       setModalUsuario(null);
@@ -112,7 +112,6 @@ const Usuarios: React.FC<UsuariosProps> = ({ usuarioLogueado }) => {
     }
   };
 
-  // Export CSV
   const exportCSV = () => {
     const csvContent =
       "data:text/csv;charset=utf-8," +
@@ -128,7 +127,6 @@ const Usuarios: React.FC<UsuariosProps> = ({ usuarioLogueado }) => {
     saveAs(encodedUri, "usuarios.csv");
   };
 
-  // Export Excel
   const exportExcel = () => {
     const ws = XLSX.utils.json_to_sheet(
       usuariosFiltrados.map(u => ({
@@ -144,7 +142,6 @@ const Usuarios: React.FC<UsuariosProps> = ({ usuarioLogueado }) => {
     XLSX.writeFile(wb, "usuarios.xlsx");
   };
 
-  // Export PDF
   const exportPDF = () => {
     const doc = new jsPDF();
     doc.text("Usuarios Registrados", 14, 15);
@@ -169,7 +166,7 @@ const Usuarios: React.FC<UsuariosProps> = ({ usuarioLogueado }) => {
         <h1 className="text-3xl font-bold text-gray-800">Usuarios Registrados</h1>
         <button
           onClick={handleCreate}
-          className="bg-teal-500 hover:bg-teal-600 text-white px-5 py-2 rounded-3xl shadow-xl font-semibold transition-transform transform hover:scale-105"
+          className="bg-cyan-200 hover:bg-cyan-500 text-lead px-5 py-2 rounded-3xl shadow-xl font-semibold transition-transform transform hover:scale-105"
         >
           + Agregar Usuario
         </button>
@@ -236,6 +233,6 @@ const Usuarios: React.FC<UsuariosProps> = ({ usuarioLogueado }) => {
 };
 
 const buttonStyle =
-  "bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-3xl shadow transition-transform transform hover:scale-105 font-semibold";
+  "bg-cyan-200 hover:bg-cyan-500 text-lead px-4 py-2 rounded-3xl shadow transition-transform transform hover:scale-105 font-semibold";
 
 export default Usuarios;

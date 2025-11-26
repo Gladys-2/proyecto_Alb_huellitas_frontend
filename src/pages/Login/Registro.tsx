@@ -48,7 +48,7 @@ const Registro: React.FC<RegistroProps> = ({ mostrarLogin }) => {
       return;
     }
     if (telefono.length !== 8) {
-      alert("El teléfono debe tener 8 números.");
+      alert("el telef. debe tener 8 números.");
       return;
     }
 
@@ -170,9 +170,8 @@ const Registro: React.FC<RegistroProps> = ({ mostrarLogin }) => {
               onChange={(val) => /^\d{0,8}$/.test(val) && setCedulaIdentidad(val)}
               animar={animar}
             />
-
-            <div
-              className={`flex items-center gap-2 border border-white rounded-lg p-2 flex-1 transition-all duration-700 ${animar ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            <div //aqui pusimos lo del transparente
+              className={`flex items-center gap-2 flex-1 border border-white rounded-lg p-2 bg-white/20 backdrop-blur-sm shadow-inner focus-within:ring-2 focus-within:ring-yellow-400 transition-all duration-700 ${animar ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
             >
               <button
@@ -225,7 +224,7 @@ const Registro: React.FC<RegistroProps> = ({ mostrarLogin }) => {
             <select
               value={genero}
               onChange={(e) => setGenero(e.target.value)}
-              className={`flex-1 min-w-[150px] border border-white rounded-lg p-3 bg-transparent text-black outline-none transition-all duration-700 ${animar ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              className={`flex-1 border border-white rounded-lg p-2 bg-white/20 backdrop-blur-sm shadow-inner focus-within:ring-2 focus-within:ring-yellow-400 transition-all duration-700 ${animar ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"//borde transapparente pusee
                 }`}
               required
             >
@@ -243,61 +242,61 @@ const Registro: React.FC<RegistroProps> = ({ mostrarLogin }) => {
               hover:scale-105 hover:brightness-110 transition-all duration-700
               ${animar ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           >
-          {translate("Crear cuenta")}
-        </button>
-      </form>
+            {translate("Crear cuenta")}
+          </button>
+        </form>
 
-      {/* Social login */}
-      <p
-        className={`text-white mt-3 text-center transition-all duration-700 delay-100 ${animar ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-      >
-        {translate("O regístrate con")}
-      </p>
-      <div
-        className={`flex justify-center gap-6 mt-2 flex-wrap transition-all duration-700 delay-200 ${animar ? "opacity-100 scale-100" : "opacity-0 scale-75"
-          }`}
-      >
-        <a
-          href="https://accounts.google.com/signin"
-          target="_blank"
-          rel="noopener noreferrer"
+        {/* Social login */}
+        <p
+          className={`text-white mt-3 text-center transition-all duration-700 delay-100 ${animar ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
         >
-          <FcGoogle className="text-3xl cursor-pointer hover:scale-125 hover:brightness-110 transition-all" />
-        </a>
-        <a
-          href="https://www.facebook.com/login/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#3967c1]"
+          {translate("O regístrate con")}
+        </p>
+        <div
+          className={`flex justify-center gap-6 mt-2 flex-wrap transition-all duration-700 delay-200 ${animar ? "opacity-100 scale-100" : "opacity-0 scale-75"
+            }`}
         >
-          <FaFacebookF className="text-3xl cursor-pointer hover:scale-125 hover:brightness-110 transition-all" />
-        </a>
-        <a
-          href="https://appleid.apple.com/sign-in"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-black"
+          <a
+            href="https://accounts.google.com/signin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FcGoogle className="text-3xl cursor-pointer hover:scale-125 hover:brightness-110 transition-all" />
+          </a>
+          <a
+            href="https://www.facebook.com/login/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#3967c1]"
+          >
+            <FaFacebookF className="text-3xl cursor-pointer hover:scale-125 hover:brightness-110 transition-all" />
+          </a>
+          <a
+            href="https://appleid.apple.com/sign-in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-black"
+          >
+            <FaApple className="text-3xl cursor-pointer hover:scale-125 hover:brightness-110 transition-all" />
+          </a>
+        </div>
+
+        {/* Link Inicia sesión */}
+        <p
+          className={`text-black text-center mt-4 transition-all duration-700 delay-300 ${animar ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
         >
-          <FaApple className="text-3xl cursor-pointer hover:scale-125 hover:brightness-110 transition-all" />
-        </a>
+          {translate("¿Ya tienes cuenta?")}
+          <span className="ml-4"></span>
+          <button
+            onClick={mostrarLogin}
+            className="font-bold underline text-white hover:text-yellow-400 active:text-[#E6A84E] transition-colors text-lg"
+          >
+            {translate("Inicia sesión")}
+          </button>
+        </p>
       </div>
-
-      {/* Link Inicia sesión */}
-      <p
-        className={`text-black text-center mt-4 transition-all duration-700 delay-300 ${animar ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-      >
-        {translate("¿Ya tienes cuenta?")}
-        <span className="ml-4"></span>
-        <button
-          onClick={mostrarLogin}
-          className="font-bold underline text-white hover:text-yellow-400 active:text-[#E6A84E] transition-colors text-lg"
-        >
-          {translate("Inicia sesión")}
-        </button>
-      </p>
-    </div>
     </div >
   );
 };

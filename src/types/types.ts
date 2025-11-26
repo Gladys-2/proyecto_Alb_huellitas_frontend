@@ -87,9 +87,11 @@ export interface Adopcion {
 export interface Donacion {
   id?: number;
   usuarioId?: number;
+  nombreUsuario?: string;
   monto: number;
-  tipo?:  "dinero" | "comida" | "ropa" | "juguete",
+  tipo?: string;
   fecha?: string;
+  metodoPago?: string;
   estado?: string;
   fechaCreacion?: string;
   usuarioCreacion?: string;

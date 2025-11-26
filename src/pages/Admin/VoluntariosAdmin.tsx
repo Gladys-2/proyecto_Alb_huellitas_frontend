@@ -25,31 +25,31 @@ const TablaVoluntarios: React.FC = () => {
   }, []);
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-4 text-gray-800">Voluntarios Registrados</h2>
-      <div className="overflow-x-auto">
-        <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-teal-500 text-white">
-            <tr>
-              <th className="px-6 py-3 text-left">ID</th>
-              <th className="px-6 py-3 text-left">Nombre</th>
-              <th className="px-6 py-3 text-left">Correo</th>
-              <th className="px-6 py-3 text-left">Teléfono</th>
-              <th className="px-6 py-3 text-left">Refugio</th>
-            </tr>
-          </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
-            {voluntarios.map((v) => (
-              <tr key={v.id} className="hover:bg-gray-50 transition-colors">
-                <td className="px-6 py-4">{v.id}</td>
-                <td className="px-6 py-4">{v.nombre}</td>
-                <td className="px-6 py-4">{v.correo}</td>
-                <td className="px-6 py-4">{v.telefono}</td>
-                <td className="px-6 py-4">{v.refugio?.nombre || "Sin refugio"}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+    <div className="p-6 bg-gray-50 min-h-screen">
+      <h2 className="text-2xl font-bold mb-6 text-gray-800 text-center">
+        Voluntarios Registrados
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {voluntarios.map((v) => (
+          <div
+            key={v.id}
+            className="bg-cyan-200 rounded-3xl p-4 shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 cursor-pointer"
+          >
+            <div className="flex items-center gap-4">
+              <div className="bg-cyan-400 text-white w-12 h-12 flex items-center justify-center rounded-full font-bold text-lg">
+                {v.id}
+              </div>
+              <div className="flex-1">
+                <h3 className="font-semibold text-gray-800 text-lg">{v.nombre}</h3>
+                <p className="text-gray-700 text-sm">{v.correo}</p>
+                <p className="text-gray-700 text-sm">{v.telefono}</p>
+                <p className="text-gray-700 text-sm font-medium">
+                  {v.refugio?.nombre || "Sin refugio"}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

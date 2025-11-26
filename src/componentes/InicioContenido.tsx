@@ -12,8 +12,8 @@ const mascotasAdopcionHero = [
         subtituloPrincipal: "LABRADOR",
         ubicacion: "2 Años | Amigable",
         descripcion: "Un compañero lleno de vida, muy cariñoso y juguetón. Ideal para familias que buscan un amigo leal.",
-        imagenFondo: "https://i.postimg.cc/Yq6rk9bK/Whats-App-Image-2025-11-03-at-19-26-44.jpg",
-        imagenTarjeta: "https://i.postimg.cc/Yq6rk9bK/Whats-App-Image-2025-11-03-at-19-26-44.jpg",
+        imagenFondo: "https://th.bing.com/th/id/R.2a967aff450aa907f75697b87d0a727e?rik=NRXvs22%2fi2AttQ&riu=http%3a%2f%2fimg.soy-chile.cl%2fFotos%2f2018%2f04%2f03%2ffile_20180403190908.jpg&ehk=Q4XLrXwuY4E9JcQoOAdEYYmKEvLx05reQaj9PnHdkJU%3d&risl=&pid=ImgRaw&r=0",
+        imagenTarjeta: "https://th.bing.com/th/id/R.2a967aff450aa907f75697b87d0a727e?rik=NRXvs22%2fi2AttQ&riu=http%3a%2f%2fimg.soy-chile.cl%2fFotos%2f2018%2f04%2f03%2ffile_20180403190908.jpg&ehk=Q4XLrXwuY4E9JcQoOAdEYYmKEvLx05reQaj9PnHdkJU%3d&risl=&pid=ImgRaw&r=0",
     },
     {
         id: 2,
@@ -21,8 +21,8 @@ const mascotasAdopcionHero = [
         subtituloPrincipal: "BULLDOG",
         ubicacion: "3 Años | Enérgico",
         descripcion: "Lleno de energía, activo y leal. Necesita ejercicio diario y mucho amor.",
-        imagenFondo: "https://i.postimg.cc/8Cq9jdzx/Whats-App-Image-2025-11-03-at-19-29-41.jpg",
-        imagenTarjeta: "https://i.postimg.cc/8Cq9jdzx/Whats-App-Image-2025-11-03-at-19-29-41.jpg",
+        imagenFondo: "https://th.bing.com/th/id/R.c95c975ab10b02706aee84de21f6ca7b?rik=EMIfXVmPBIEEMA&riu=http%3a%2f%2fimages.gmanews.tv%2fwebpics%2f2021%2f12%2f640_image013_2021_12_08_17_38_08.png&ehk=sqB6j9xIrqLZqoCj1Lrbor%2bU1rwFUdK5LFGfft9xblo%3d&risl=&pid=ImgRaw&r=0",
+        imagenTarjeta: "https://th.bing.com/th/id/R.c95c975ab10b02706aee84de21f6ca7b?rik=EMIfXVmPBIEEMA&riu=http%3a%2f%2fimages.gmanews.tv%2fwebpics%2f2021%2f12%2f640_image013_2021_12_08_17_38_08.png&ehk=sqB6j9xIrqLZqoCj1Lrbor%2bU1rwFUdK5LFGfft9xblo%3d&risl=&pid=ImgRaw&r=0",
     },
     {
         id: 3,
@@ -30,8 +30,8 @@ const mascotasAdopcionHero = [
         subtituloPrincipal: "PASTOR ALEMÁN",
         ubicacion: "1 Año | Inteligente",
         descripcion: "Alegre, curiosa e inteligente. Lista para explorar y llenar tu hogar de ternura.",
-        imagenFondo: "https://img.freepik.com/foto-gratis/hermosos-gatos-campo_23-2151983519.jpg?semt=ais_incoming&w=740&q=80",
-        imagenTarjeta: "https://img.freepik.com/foto-gratis/hermosos-gatos-campo_23-2151983519.jpg?semt=ais_incoming&w=740&q=80",
+        imagenFondo: "https://d.newsweek.com/en/full/1812951/chinook.jpg?w=1200&f=5db99a2d59d7ceb11db1cd37c1780552",
+        imagenTarjeta: "https://d.newsweek.com/en/full/1812951/chinook.jpg?w=1200&f=5db99a2d59d7ceb11db1cd37c1780552",
     },
     {
         id: 4,
@@ -39,24 +39,24 @@ const mascotasAdopcionHero = [
         subtituloPrincipal: "Huscky Siberiano",
         ubicacion: "1 Año | Energetico",
         descripcion: "Jugueton, curioso e inteligente. Lista para explorar y llenar tu hogar de ternura.",
-        imagenFondo: "https://media.istockphoto.com/id/1214614376/es/foto/d%C3%BAo-aullante.jpg?s=612x612&w=0&k=20&c=NyETS_akVC6cWWxVPTn6c8zdpeM-ykZbHGU633uSIYo=",
-        imagenTarjeta: "https://media.istockphoto.com/id/1214614376/es/foto/d%C3%BAo-aullante.jpg?s=612x612&w=0&k=20&c=NyETS_akVC6cWWxVPTn6c8zdpeM-ykZbHGU633uSIYo=",
+        imagenFondo: "https://images.evisos.com.bo/2014/08/14/cachorro-husky-siberiano_8a3254e2e8_3.jpg",
+        imagenTarjeta: "https://images.evisos.com.bo/2014/08/14/cachorro-husky-siberiano_8a3254e2e8_3.jpg",
     },
     {
         id: 5,
-        tituloPrincipal: "Lucas",
+        tituloPrincipal: "kiara",
         subtituloPrincipal: "Pomerania",
         ubicacion: "1 Año | Inteligente",
         descripcion: "Muy jugueton, cariñosa. Lista para explorar y llenar tu hogar de ternura.",
-        imagenFondo: "https://rovinfood.com/wp-content/uploads/2024/03/destacada-pomerania-1200x675.jpg",
-        imagenTarjeta: "https://rovinfood.com/wp-content/uploads/2024/03/destacada-pomerania-1200x675.jpg",
+        imagenFondo: "https://www.periodicodigitalgratis.com/gratis/imagen/27551_0598598001571680018.jpg",
+        imagenTarjeta: "https://www.periodicodigitalgratis.com/gratis/imagen/27551_0598598001571680018.jpg",
     },
 ];
 
 const perrosData = [
-    { nombre: "Daizon", edad: "2 años", raza: "Labrador", imagen: "https://i.postimg.cc/Yq6rk9bK/Whats-App-Image-2025-11-03-at-19-26-44.jpg", descripcion: "Daizon es un compañero lleno de vida, muy cariñoso y juguetón. Ideal para familias." },
-    { nombre: "Lucas", edad: "3 años", raza: "Bulldog", imagen: "https://i.postimg.cc/8Cq9jdzx/Whats-App-Image-2025-11-03-at-19-29-41.jpg", descripcion: "Lucas es un compañero lleno de energía, muy activo y leal. Necesita ejercicio diario." },
-    { nombre: "Luna", edad: "1 año", raza: "Pastor Alemán", imagen: "https://i.postimg.cc/jddgq3hR/Whats-App-Image-2025-11-03-at-19-30-59.jpg", descripcion: "Luna es una compañera alegre y curiosa, muy inteligente y siempre lista para aprender cosas nuevas." },
+    { nombre: "Enzo", edad: "2 años", raza: "Labrador", imagen: "https://media.istockphoto.com/id/1488211108/es/foto/retrato-de-perro-callejero-toma-al-aire-libre.webp?b=1&s=170667a&w=0&k=20&c=5m3JN8MyqwUEdMt5vsBZMYL96YSMhbeWI86IUBD0jCE=", descripcion: "Daizon es un compañero lleno de vida, muy cariñoso y juguetón. Ideal para familias." },
+    { nombre: "Calvin", edad: "3 años", raza: "Bulldog", imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzpy7Bw-wyr_1ErqeNop3RW26jkh94ToXKag&s", descripcion: "Lucas es un compañero lleno de energía, muy activo y leal. Necesita ejercicio diario." },
+    { nombre: "Rufo", edad: "1 año", raza: "Felis catus", imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB8g5aMyh-v8qFtJ_gGlWoChSqLTzcG-a8DQ&s", descripcion: "Luna es una compañera alegre y curiosa, muy inteligente y siempre lista para aprender cosas nuevas." },
 ];
 const carouselPerros = [...perrosData, ...perrosData];
 
@@ -64,18 +64,18 @@ const carouselPerros = [...perrosData, ...perrosData];
 const blogs = [
     {
         titulo: "¿Cómo adoptar un perrito?",
-        descripcion: "Te explicamos el proceso de adopción y los requisitos necesarios.",
-        imagen: "https://image.petmd.com/files/styles/978x550/public/2022-04/happy-dogs.jpg",
+        descripcion: "Adoptar un perrito es más que un trámite: es abrirle la puerta a una segunda oportunidad. Todo comienza eligiendo al compañero que encaje con tu ritmo de vida. Luego, completas un formulario y conversas con el equipo del refugio, quienes desean asegurarse de que el perrito llegue a un hogar donde será realmente amado. Si todo va bien, firmas el acuerdo de adopción y ese día se convierte en el inicio de una nueva historia para ambos. No es solo un proceso… es el comienzo de una amistad que cambiará vidas.",
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCus_qNaM55bOaOgmw1J2jBpwMiv53xrA57FbnKZu2pE1V0_qd2qim5QTEUdj_-aDb5mc&usqp=CAU",
     },
     {
         titulo: "Cuidados básicos",
-        descripcion: "Aprende cómo cuidar correctamente a tu nuevo amigo peludo.",
+        descripcion: "Aprende cómo cuidar correctamente a tu nuevo amigo peludo: Cuidar a un perrito es una manera hermosa de agradecerle su compañía. Necesita alimento adecuado, agua fresca y un espacio donde pueda sentirse seguro. Pero más allá de lo básico, requiere paseos, juegos, palabras amables y un poco de paciencia. Cada día que lo cuidas, él te responde con lealtad, alegría y esa mirada que solo un perrito adoptado sabe dar: una mezcla de gratitud y amor puro.",
         imagen: "https://images.unsplash.com/photo-1564325810764-3b92cd6a1833?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHx8",
     },
     {
         titulo: "La importancia de la esterilización",
-        descripcion: "Descubre por qué esterilizar a tu mascota es fundamental para su salud y la comunidad.",
-        imagen: "https://www.protectivity.com/wp-content/uploads/2024/08/Explained-Dog-Walking-Qualifications-and-Licensing.jpg",
+        descripcion: "Descubre por qué esterilizar a tu mascota es fundamental para su salud y la comunidad: Esterilizar a un perrito es un acto de responsabilidad y, sobre todo, de amor. Este procedimiento previene enfermedades, evita camadas no deseadas y ayuda a reducir el abandono en las calles. Más que una cirugía, es una manera de proteger su salud y su futuro. Al esterilizar, estás contribuyendo a que menos animales sufran, y eso convierte tu decisión en un gesto que trasciende a tu propia mascota. Es cuidar a uno… y ayudar a muchos.",
+        imagen: "https://lapaz.bo/wp-content/uploads/2024/06/can2.jpg",
     },
 ];
 
@@ -107,10 +107,10 @@ const InicioContenido: React.FC<InicioContenidoProps> = ({ sidebarAbierto }) => 
     return (
         <div
             className="w-full transition-all duration-300"
-            style={{ marginLeft: sidebarAbierto ? 240 : 0 }} 
+            style={{ marginLeft: sidebarAbierto ? 0 : 0 }} 
         >
             {/* inicio..*/}
-            <section className="relative w-full h-[90vh] flex items-end justify-start pb-16  overflow-hidden text-white">
+            <section className="relative w-full h-screen flex items-end justify-start pb-50  overflow-hidden text-white">
                 <AnimatePresence initial={false}>
                     <motion.div
                         key={mascotaActiva.id}
@@ -124,7 +124,7 @@ const InicioContenido: React.FC<InicioContenidoProps> = ({ sidebarAbierto }) => 
                 </AnimatePresence>
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent" />
 
-                <div className="relative z-10 text-center text-white px-2 md:text-left md:px-1 max-w-2xl mb-24">
+                <div className="relative z-10 text-center text-white px-2 md:text-left md:px-1 max-w-2xl mb-5">
                     <motion.span className="text-xl font-semibold tracking-wide uppercase text-orange-400">
                         {t(mascotaActiva.ubicacion)}
                     </motion.span>
@@ -252,7 +252,6 @@ const InicioContenido: React.FC<InicioContenidoProps> = ({ sidebarAbierto }) => 
                             <div className="p-6">
                                 <h3 className="text-2xl font-bold text-gray-900 mb-3">{t(blog.titulo)}</h3>
                                 <p className="text-gray-600 line-clamp-none">{t(blog.descripcion)}</p>
-                                {/* Botón "Leer más" ELIMINADO */}
                             </div>
                         </div>
                     ))}

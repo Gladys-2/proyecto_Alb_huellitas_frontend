@@ -156,16 +156,16 @@ const ReportesAdmin: React.FC = () => {
             onChange={e => { setBusqueda(e.target.value); setPaginaActual(1); }}
           />
           <div className="flex gap-2 mt-2 md:mt-0">
-            <button onClick={exportCSV} className="bg-cyan-500 text-white px-4 py-2 rounded-xl hover:bg-cyan-600 transition">CSV</button>
-            <button onClick={exportExcel} className="bg-cyan-500 text-white px-4 py-2 rounded-xl hover:bg-cyan-600 transition">Excel</button>
-            <button onClick={exportPDF} className="bg-cyan-500 text-white px-4 py-2 rounded-xl hover:bg-cyan-600 transition">PDF</button>
+            <button onClick={exportCSV} className="bg-cyan-200 text-lead px-4 py-2 rounded-xl hover:bg-cyan-600 transition">CSV</button>
+            <button onClick={exportExcel} className="bg-cyan-200 text-lead px-4 py-2 rounded-xl hover:bg-cyan-600 transition">Excel</button>
+            <button onClick={exportPDF} className="bg-cyan-200 text-lead px-4 py-2 rounded-xl hover:bg-cyan-600 transition">PDF</button>
           </div>
         </div>
 
         {cargando ? <p className="text-center text-gray-500">Cargando usuarios...</p> : (
           <div className="overflow-x-auto">
             <table className="min-w-full text-left border-collapse shadow-sm rounded-xl">
-              <thead className="bg-linear-to-r from-cyan-400 to-blue-500 text-white">
+              <thead className="bg-linear-to-r from-cyan-200 to-cyan-200 text-lead">
                 <tr>
                   <th className="px-6 py-3 font-semibold">Nombre</th>
                   <th className="px-6 py-3 font-semibold">Apellido</th>
