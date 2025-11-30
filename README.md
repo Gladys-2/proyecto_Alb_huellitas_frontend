@@ -1,73 +1,30 @@
 # React + TypeScript + Vite
+Este proyecto corresponde al frontend desarrollado con React, TypeScript y Vite. El documento describe los pasos necesarios para instalar, ejecutar y revisar el proyecto de forma correcta.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Requisitos previos
+- Para poder ejecutar el proyecto es necesario tener instalado:
 
-Currently, two official plugins are available:
+ 1-Node.js (versión 18 o superior)
+  Disponible en: https://nodejs.org/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ 2-Para verificar la instalación:
+  node -v
+  npm -v
 
-## React Compiler
+ 3-Instalación del proyecto
+  Clonar el repositorio:
+  git clone https://github.com/Gladys-2/proyecto_Alb_huellitas_frontend.git
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+ 4-Ingresar al directorio del proyecto:
+  cd frontend
 
-## Expanding the ESLint configuration
+ 5-Instalar las dependencias:
+  npm install
+  Con esto descargará todas las librerías necesarias para el funcionamiento del frontend.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+ 6-Ejecución en modo desarrollo
+  Para iniciar el entorno de desarrollo:
+  npm run dev
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+ 7-El proyecto estará disponible en:
+ http://localhost:5173
