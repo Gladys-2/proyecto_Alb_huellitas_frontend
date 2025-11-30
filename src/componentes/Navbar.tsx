@@ -4,7 +4,7 @@ import type { Usuario, Pantalla } from "../types/types";
 import { useTranslation } from "react-i18next";
 
 interface NavbarProps {
-  usuario: Usuario;
+  usuario: Usuario | null; 
   sidebarAbierto: boolean;
   setSidebarAbierto: (abierto: boolean) => void;
   setPantalla: (pantalla: Pantalla) => void;
@@ -42,28 +42,60 @@ const coloresIniciales: Record<string, string> = {
   Z: "from-green-200 to-green-400",
 };
 
-const Navbar: React.FC<NavbarProps> = ({ usuario, sidebarAbierto, setSidebarAbierto, setPantalla }) => {
+const Navbar: React.FC<NavbarProps> = ({
+  usuario,
+  sidebarAbierto,
+  setSidebarAbierto,
+  setPantalla,
+}) => {
   useContext(IdiomaContext);
   const { t, i18n } = useTranslation();
 
   const iniciales =
-    usuario.nombre.charAt(0).toUpperCase() +
-    (usuario.apellido_paterno ? usuario.apellido_paterno.charAt(0).toUpperCase() : "");
+    usuario
+      ? usuario.nombre.charAt(0).toUpperCase() +
+        (usuario.apellido_paterno ? usuario.apellido_paterno.charAt(0).toUpperCase() : "")
+      : "";
 
-  const colorInicial = coloresIniciales[iniciales.charAt(0)] || "from-yellow-400 to-orange-500";
+  const colorInicial =
+    coloresIniciales[iniciales.charAt(0)] || "from-yellow-400 to-orange-500";
 
   return (
     <header className="w-full fixed top-0 left-0 z-50 bg-white dark:bg-gray-900 transition-colors duration-300">
       <nav className="w-full flex justify-between items-center px-6 py-4 shadow-md backdrop-blur-md bg-gray-200/80 dark:bg-gray-800/80 transition-colors duration-300">
         
-        {/* Logo mas el Toggle sidebar */}
-        <div className="flex items-center gap-2 cursor-pointer" onClick={() => setSidebarAbierto(!sidebarAbierto)}>
+        {/* Logo */}
+        <div
+          className="flex items-center gap-2 cursor-pointer"
+          onClick={() => usuario && setSidebarAbierto(!sidebarAbierto)}
+        >
           <img src="../LOGO2.jpeg" className="w-8 h-8 rounded-full" alt={t("Logo Huellitas")} />
-          <span className="text-2xl font-bold text-gray-900 dark:text-white">{t("Huellitas")}</span>
+          <span className="text-2xl font-bold text-gray-900 dark:text-white">
+            {t("Huellitas")}
+          </span>
         </div>
 
-        {/* Menú según rol */}
-        {usuario.rol === "usuario" && (
+        {/*usuario */}
+        {!usuario && (
+          <div className="hidden md:flex gap-4">
+            <button
+              onClick={() => setPantalla("login")}
+              className="px-4 py-2 text-gray-900 border border-gray-700 rounded-md hover:bg-gray-300 transition"
+            >
+              Iniciar Sesión
+            </button>
+
+            <button
+              onClick={() => setPantalla("registro")}
+              className="px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition"
+            >
+              Registrarse
+            </button>
+          </div>
+        )}
+
+        {/* si hay usuario mostrar menu normal*/}
+        {usuario?.rol === "usuario" && (
           <div className="hidden md:flex gap-6">
             <button onClick={() => setPantalla("inicio")} className="text-gray-900 dark:text-gray-200 hover:text-orange-600 transition-colors">{t("Inicio")}</button>
             <button onClick={() => setPantalla("adopciones")} className="text-gray-900 dark:text-gray-200 hover:text-orange-600 transition-colors">{t("Adopciones")}</button>
@@ -73,30 +105,43 @@ const Navbar: React.FC<NavbarProps> = ({ usuario, sidebarAbierto, setSidebarAbie
           </div>
         )}
 
-        {/*  solo idioma e iniciales */}
+        {/* Idiomas + Iniciales */}
         <div className="flex items-center gap-4">
-          {/* Idioma */}
+          {/* Flags */}
           <img
             src={banderaBO}
             onClick={() => i18n.changeLanguage("es")}
-            className={`w-7 h-7 rounded-md cursor-pointer border-2 ${i18n.language === "es" ? "border-orange-500 scale-110" : "border-gray-400"}`}
-            alt={t("Bandera Bolivia")}
+            className={`w-7 h-7 rounded-md cursor-pointer border-2 ${
+              i18n.language === "es"
+                ? "border-orange-500 scale-110"
+                : "border-gray-400"
+            }`}
           />
           <img
             src={banderaUS}
             onClick={() => i18n.changeLanguage("en")}
-            className={`w-7 h-7 rounded-md cursor-pointer border-2 ${i18n.language === "en" ? "border-orange-500 scale-110" : "border-gray-400"}`}
-            alt={t("Bandera USA")}
+            className={`w-7 h-7 rounded-md cursor-pointer border-2 ${
+              i18n.language === "en"
+                ? "border-orange-500 scale-110"
+                : "border-gray-400"
+            }`}
           />
 
-          {/* Iniciales */}
-          <div className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold bg-linear-to-br ${colorInicial}`}>
-            {iniciales}
-          </div>
+          {/* SI NO HAY USUARIO → NO MOSTRAR INICIALES */}
+          {usuario && (
+            <>
+              <div
+                className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold bg-linear-to-br ${colorInicial}`}
+              >
+                {iniciales}
+              </div>
 
-          <small className="text-gray-800 dark:text-gray-100 font-semibold">
-            {t("Bienvenido")} {usuario.rol === "administrador" ? t("Administrador") : t("Usuario")}
-          </small>
+              <small className="text-gray-800 dark:text-gray-100 font-semibold">
+                {t("Bienvenido")}{" "}
+                {usuario.rol === "administrador" ? t("Administrador") : t("Usuario")}
+              </small>
+            </>
+          )}
         </div>
       </nav>
     </header>
