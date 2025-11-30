@@ -32,7 +32,7 @@ const Usuarios: React.FC<UsuariosProps> = ({ usuarioLogueado }) => {
       }));
       setUsuarios(usuariosConEstado);
     } catch (err) {
-      console.error("Error al obtener usuarios:", err);
+      console.error("Ocurrio un error al obtener el usuarios:", err);
     } finally {
       setCargando(false);
     }
