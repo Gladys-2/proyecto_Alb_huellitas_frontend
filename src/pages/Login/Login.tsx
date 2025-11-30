@@ -17,6 +17,7 @@ const Login: React.FC<LoginProps> = ({ mostrarRegistro, onLoginExitoso }) => {
   const [contrasena, setContrasena] = useState("");
   const [loading, setLoading] = useState(false);
   const [mostrarContrasena, setMostrarContrasena] = useState(false);
+  const [errorMensaje, setErrorMensaje] = useState(""); // Estado para error
   const { t } = useIdioma();
 
   const [animar, setAnimar] = useState(false);
@@ -28,6 +29,7 @@ const Login: React.FC<LoginProps> = ({ mostrarRegistro, onLoginExitoso }) => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setErrorMensaje(""); 
 
     try {
       const response = await axios.post(`${API_URL}/login`, {
@@ -36,15 +38,20 @@ const Login: React.FC<LoginProps> = ({ mostrarRegistro, onLoginExitoso }) => {
       });
 
       if (response.data.usuario) {
-        console.log("Login exitoso:", response.data.usuario);
-        onLoginExitoso(response.data.usuario);
+        const usuario = response.data.usuario;
+
+        console.log("localhost:", "%c LOGIN EXITOSO", "color: green; font-weight: bold;");
+        console.log("localhost: Usuario:", usuario);
+        console.log(`localhost: Bienvenido/a ${usuario.nombre || "usuario"}`);
+
+        onLoginExitoso(usuario);
       } else {
-        // Mostrar error específico en consola
-        const mensaje = response.data.message || "Usuario o contraseña incorrecta";
-        console.log("Error login:", mensaje);
+        setErrorMensaje("Correo o contraseña incorrectos"); 
+        console.log("localhost:", "%c ERROR LOGIN", "color: orange; font-weight: bold;", response.data.message || "Usuario o contraseña incorrecta");
       }
     } catch (error) {
-      console.log("Error login:", "Usuario o contraseña incorrecta");
+      setErrorMensaje("Error con el servidor. Intenta de nuevo");
+      console.log("localhost:", "%c ERROR SERVIDOR", "color: red; font-weight: bold;", error);
     } finally {
       setLoading(false);
     }
@@ -105,7 +112,7 @@ const Login: React.FC<LoginProps> = ({ mostrarRegistro, onLoginExitoso }) => {
               required
               autoComplete="current-password"
             />
-            {/* Solo un ojo blanco, cambia a tachado */}
+
             <span
               className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer text-black hover:text-yellow-400 hover:scale-110 transition-all"
               onClick={() => setMostrarContrasena(!mostrarContrasena)}
@@ -121,6 +128,13 @@ const Login: React.FC<LoginProps> = ({ mostrarRegistro, onLoginExitoso }) => {
           >
             {loading ? t("Cargando...") : t("Iniciar Sesión")}
           </button>
+
+          {/* Mensaje de error UI */}
+          {errorMensaje && (
+            <p className="text-red-600 font-semibold text-center mt-2">
+              {errorMensaje}
+            </p>
+          )}
         </form>
 
         <p
@@ -130,18 +144,28 @@ const Login: React.FC<LoginProps> = ({ mostrarRegistro, onLoginExitoso }) => {
           {t("O inicia sesión con")}
         </p>
 
+        {/* Redes sociales */}
         <div
           className={`flex justify-center gap-6 my-4 transition-all duration-700
           ${animar ? "opacity-100 scale-100" : "opacity-0 scale-75"}`}
         >
-          <FcGoogle className="text-3xl cursor-pointer hover:scale-125 hover:brightness-110 transition-all" />
-          <FaFacebookF className="text-2xl text-blue-700 cursor-pointer hover:scale-125 hover:brightness-110 transition-all" />
-          <FaApple className="text-3xl text-black cursor-pointer hover:scale-125 hover:brightness-110 transition-all" />
+          <a href="https://myaccount.google.com/" target="_blank" rel="noopener noreferrer">
+            <FcGoogle className="text-3xl cursor-pointer hover:scale-125 hover:brightness-110 transition-all" />
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+            <FaFacebookF className="text-2xl text-blue-700 cursor-pointer hover:scale-125 hover:brightness-110 transition-all" />
+          </a>
+          <a href="https://www.apple.com/" target="_blank" rel="noopener noreferrer">
+            <FaApple className="text-3xl text-black cursor-pointer hover:scale-125 hover:brightness-110 transition-all" />
+          </a>
         </div>
 
         <p className="text-mango-900 text-lg">
           {t("¿No tienes cuenta?")}{" "}
-          <button className="font-bold underline text-white hover:text-yellow-400 active:text-[#E6A84E] transition-colors text-lg" onClick={mostrarRegistro}>
+          <button
+            className="font-bold underline text-white hover:text-yellow-400 active:text-[#E6A84E] transition-colors text-lg"
+            onClick={mostrarRegistro}
+          >
             {t("Crear cuenta")}
           </button>
         </p>
