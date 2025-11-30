@@ -1,19 +1,17 @@
 export type Pantalla =
+  | "inicioPublico"
   | "login"
   | "registro"
   | "inicio"
   | "usuarios"
-  | "animales"
-  | "adopciones"
-  | "donaciones"
-  | "voluntarios"
   | "reportes"
-  | "configuracion"
   | "animalesAdmin"
-  |"donacioneAdmin"
-  | "voluntariosAdmin"  
+  | "voluntariosAdmin"
   | "donacionesAdmin"
-  | "salir";
+  | "adopciones"
+  | "animales"
+  | "voluntarios"
+  | "donaciones";
   
 export interface Usuario {
   id?: number;                       
@@ -29,7 +27,7 @@ export interface Usuario {
   avatarUrl?: string;
   rol?: "usuario" | "administrador";
   genero?: "M" | "F" | "O";
-  estado: "Activo" | "Inactivo"; // <- sin ? ahora es obligatorio
+  estado: "Activo" | "Inactivo";
   fecha_creacion?: Date;
   usuario_creacion?: string;
   fecha_modificacion?: Date;
