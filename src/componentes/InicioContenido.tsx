@@ -54,9 +54,9 @@ const mascotasAdopcionHero = [
 ];
 
 const perrosData = [
-    { nombre: "Enzo", edad: "2 años", raza: "Labrador", imagen: "https://media.istockphoto.com/id/1488211108/es/foto/retrato-de-perro-callejero-toma-al-aire-libre.webp?b=1&s=170667a&w=0&k=20&c=5m3JN8MyqwUEdMt5vsBZMYL96YSMhbeWI86IUBD0jCE=", descripcion: "Daizon es un compañero lleno de vida, muy cariñoso y juguetón. Ideal para familias." },
-    { nombre: "Calvin", edad: "3 años", raza: "Bulldog", imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzpy7Bw-wyr_1ErqeNop3RW26jkh94ToXKag&s", descripcion: "Lucas es un compañero lleno de energía, muy activo y leal. Necesita ejercicio diario." },
-    { nombre: "Rufo", edad: "1 año", raza: "Felis catus", imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB8g5aMyh-v8qFtJ_gGlWoChSqLTzcG-a8DQ&s", descripcion: "Luna es una compañera alegre y curiosa, muy inteligente y siempre lista para aprender cosas nuevas." },
+    { nombre: "Enzo", edad: "2 años", raza: "Labrador", imagen: "https://media.istockphoto.com/id/1488211108/es/foto/retrato-de-perro-callejero-toma-al-aire-libre.webp?b=1&s=170667a&w=0&k=20&c=5m3JN8MyqwUEdMt5vsBZMYL96YSMhbeWI86IUBD0jCE=", descripcion: "Enzo es un compañero lleno de vida, muy cariñoso y juguetón. Ideal para familias." },
+    { nombre: "Calvin", edad: "3 años", raza: "Bulldog", imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzpy7Bw-wyr_1ErqeNop3RW26jkh94ToXKag&s", descripcion: "Calvin es un compañero lleno de energía, muy activo y leal. Necesita ejercicio diario." },
+    { nombre: "Luna", edad: "1 año", raza: "Felis catus", imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB8g5aMyh-v8qFtJ_gGlWoChSqLTzcG-a8DQ&s", descripcion: "Luna es una compañera alegre y curiosa, muy inteligente y siempre lista para aprender cosas nuevas." },
 ];
 const carouselPerros = [...perrosData, ...perrosData];
 
@@ -107,7 +107,7 @@ const InicioContenido: React.FC<InicioContenidoProps> = ({ sidebarAbierto }) => 
     return (
         <div
             className="w-full transition-all duration-300"
-            style={{ marginLeft: sidebarAbierto ? 0 : 0 }} 
+            style={{ marginLeft: sidebarAbierto ? 0 : 0 }}
         >
             {/* inicio..*/}
             <section className="relative w-full h-screen flex items-end justify-start pb-50  overflow-hidden text-white">
@@ -288,9 +288,17 @@ const InicioContenido: React.FC<InicioContenidoProps> = ({ sidebarAbierto }) => 
                             {t("Brindando amor y un hogar para cada mascota que lo necesita.")}
                         </p>
                         <div className="flex items-center gap-4 mt-6">
-                            <a href="#" className="hover:text-white"><FaFacebookF /></a>
-                            <a href="#" className="hover:text-white"><FaInstagram /></a>
-                            <a href="#" className="hover:text-white"><FaTiktok /></a>
+                            <a href="https://www.facebook.com/p/Huellitas-SOS-La-Paz-100064678990800/?locale=es_LA" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                                <FaFacebookF />
+                            </a>
+
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                                <FaInstagram />
+                            </a>
+
+                            <a href="https://www.tiktok.com/discover/huellitas-la-paz" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                                <FaTiktok />
+                            </a>
                         </div>
                     </div>
 
