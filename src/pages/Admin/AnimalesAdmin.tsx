@@ -20,7 +20,7 @@ const Animales: React.FC<AnimalesProps> = ({ usuarioLogueado }) => {
       const res = await axios.get(`${API_URL}/animales`);
       setAnimales(res.data);
     } catch (err) {
-      console.error("Error al cargar animales:", err);
+      console.error("Sucedio un error al querer cargar a los animales:", err);
     }
   };
 
@@ -48,7 +48,7 @@ const Animales: React.FC<AnimalesProps> = ({ usuarioLogueado }) => {
       setModalAbierto(false);
       cargarAnimales();
     } catch (err) {
-      console.error("Error al guardar animal:", err);
+      console.error("Ocurrio un error al guardar el animal:", err);
       alert("No se pudo guardar el animal, intenta de nuevo.");
     }
   };
