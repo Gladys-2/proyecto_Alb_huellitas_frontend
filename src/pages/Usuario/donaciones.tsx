@@ -14,7 +14,6 @@ const DonacionesUsuario: React.FC<DonacionesUsuarioProps> = ({ usuario }) => {
   const [nuevoTipo, setNuevoTipo] = useState("");
   const [nuevoMonto, setNuevoMonto] = useState<number | "">("");
 
-  // Opciones visuales para elegir sin pensar demasiado 
   const opcionesSugeridas = [
     { tipo: "Croquetas", img: "https://www.cocinadelirante.com/800x600/filters:format(webp):quality(75)/sites/default/files/images/2020/01/de-que-estan-hechas-las-croquetas-para-perro-croquetas.jpg" },
     { tipo: "Ropa / Mantita", img: "https://images.ctfassets.net/denf86kkcx7r/7cBBhgXWEPikoqMnUAMp4J/d02af392eca9efbdb3bb8614514c9abe/ropaperros-78" },
